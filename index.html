@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/6.2.0/highcharts.js"></script>
+<script src="snih.js"></script>
+
+<div id="snih"></div>
+
+<script>
+snehy = [];
+Object.keys(snih).forEach(function(k) {
+    snehy.push({
+        'name': k,
+        'data': snih[k]
+    });
+});
+
+Highcharts.chart('snih', {
+title: {
+    text: 'Sníh v listopadu a prosinci, stanice Přibyslav'
+},
+credits: {
+    href: 'http://portal.chmi.cz/historicka-data/pocasi/denni-data#',
+    text: 'data ČHMÚ'
+},
+yAxis: {
+    title: {
+        text: 'cm'
+    }
+},
+xAxis: {
+    categories: ['1. 11.',
+                '2. 11.',
+                '3. 11.',
+                '4. 11.',
+                '5. 11.',
+                '6. 11.',
+                '7. 11.',
+                '8. 11.',
+                '9. 11.',
+                '10. 11.',
+                '11. 11.',
+                '12. 11.',
+                '13. 11.',
+                '14. 11.',
+                '15. 11.',
+                '16. 11.',
+                '17. 11.',
+                '18. 11.',
+                '19. 11.',
+                '20. 11.',
+                '21. 11.',
+                '22. 11.',
+                '23. 11.',
+                '24. 11.',
+                '25. 11.',
+                '26. 11.',
+                '27. 11.',
+                '28. 11.',
+                '29. 11.',
+                '30. 11.',
+                '1. 12.',
+                '2. 12.',
+                '3. 12.',
+                '4. 12.',
+                '5. 12.',
+                '6. 12.',
+                '7. 12.',
+                '8. 12.',
+                '9. 12.',
+                '10. 12.',
+                '11. 12.',
+                '12. 12.',
+                '13. 12.',
+                '14. 12.',
+                '15. 12.',
+                '16. 12.',
+                '17. 12.',
+                '18. 12.',
+                '19. 12.',
+                '20. 12.',
+                '21. 12.',
+                '22. 12.',
+                '23. 12.',
+                '24. 12.',
+                '25. 12.',
+                '26. 12.',
+                '27. 12.',
+                '28. 12.',
+                '29. 12.',
+                '30. 12.',
+                '31. 12.']
+},
+legend: {
+    enabled: false
+},
+plotOptions: {
+        series: {
+            color: '#9ecae1',
+        },
+        line: {
+            marker: {
+                enabled: false,
+                symbol: 'circle',
+                width: 1
+            },
+            lineWidth: 0.5
+        },
+    },
+series: snehy
+
+});
+</script>
